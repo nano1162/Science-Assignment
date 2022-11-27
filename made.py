@@ -18,6 +18,7 @@ def func(time1): # 시간 당 거리 계산
     return S
 
 fig, axes = plt.subplots(1)
+plt.ylabel('Height')
 
 camera = Camera(fig)
 
@@ -27,8 +28,9 @@ for i in range(len(timetable)): # 시간 당 높이 계산
     a.append(y - func(timetable[i]))
     # print('높이 :', a[i]) # 시간 당 높이 표시
     axes.plot(1, a[i], 'o', markersize = 20, color = 'r')
+    plt.xlabel('Time = %1fs' %timetable[i])
     camera.snap()
 
 animation = camera.animate(interval=50)
 
-animation.save( 'sines.gif')
+animation.save( 'sines.gif', writer = 'ffmpef', fps = 60)
