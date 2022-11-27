@@ -33,4 +33,4 @@ for i in range(len(timetable)): # 시간 당 높이 계산
 
 animation = camera.animate(interval=50)
 
-animation.save( 'sines.gif', writer = 'ffmpef', fps = 60)
+animation.save( 'gravity.gif', writer = 'ffmpef', fps = 60)

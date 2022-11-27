@@ -55,4 +55,4 @@ ax.set_aspect('equal', 'datalim')
 
 #저장
 animate = animation.ArtistAnimation(fig, lns, interval = 50)
-animate.save('Pendulum_Animation.gif', writer = 'ffmpef', fps = 60)
+animate.save('pendulum.gif', writer = 'ffmpef', fps = 60)
